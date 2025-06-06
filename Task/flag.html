@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex</title>
+    <style>
+         .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+        .item{
+            padding: 12px 70px;
+        }
+        .item-1{
+            background-color: orange;
+        }
+        .item-2{
+            display: flex;
+            width: 140px;
+            background-color: white;
+            justify-content: center;
+        }
+        .item-3{  
+            background-color: green;
+        }
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class="item-2">
+            <img src="./assets/chakra.png" alt="chakra">
+        </div>
+        <div class="item item-3"></div>
+    </div>
+
+</body>
+</html>
