@@ -1,41 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KPRCAS2025</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <meta charset="UTF-8">
+    <title>Student Details Form</title>
     <style>
-        h2{
-            color: darkgreen;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: rgb(160, 180, 160);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .details {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none;
         }
     </style>
+    <script>
+        function showDetails(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get form values
+            let name = document.getElementById("name").value;
+            let department = document.getElementById("department").value;
+            let marks = document.getlementById("semester").value;
+            
+            // Display details
+            document.getElementById("detailName").innerText = name;
+            document.getElementById("detailDept").innerText = department;
+            document.getElementById("detailMarks").innerText = marks;
+            document.getElementById("detailSem").innerText = semester;
+            document.getElementById("detailsBox").style.display = "block";
+        }
+    </script>
 </head>
 <body>
-    <h1 style="color: red; font-size: 20px;">Hello KPR</h1>
-    <h2>CT</h2>
-    <h3>IT</h3>
-    <h4>BCA</h4>
-    <h5>HELLO</h5>
-    <h6>HELLO</h6>
-    <p class="header"> <b>Lorem</b>
-        <i>ipsum</i>
-        <strong>dolor</strong> sit <br>amet consectetur adipisicing elit. Illo veritatis ex tempora a odit harum labore
-        animi velit <em><u>recusandae</u></em> <q>praesentium, consectetur, fuga asperiores, eius quas eligendi esse?</q>  At, eius a.
-        Fugiat ipsam dignissimos quas. Neque vel in fugit dolor sit beatae dolorum, error possimus tempora maxime saepe
-        quis itaque. Autem nemo suscipit est provident dolores consectetur alias consequuntur deleniti deserunt!
-    </p>
-    <a class="Link Link-one"  href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
-    <a class="Link" href="home.html">Home</a>
 
-    <ol>
-        <li id="one">IT</li>
-        <li id="two">BCA</li>
-        <li id="three">CT</li>
-    </ol>
-    <ul>
-        <li id="four">BCA</li>
-        <li id="five">CT</li>
-        <li id="six">IT</li>
-    </ul>
+    <form onsubmit="showDetails(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="CT">Computer Technology</option>
+            <option value="ECE">Electronics & Communication</option>
+            <option value="MECH">Mechanical</option>
+        </select> 
+
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" required>
+
+        <label for="semester">Semester:</label>
+        <input type="number" id="semester" name="semester" min="1" max="8" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="details" id="detailsBox">
+        <h3>Student Details</h3>
+        <p><strong>Name:</strong> <span id="detailName"></span></p>
+        <p><strong>Department:</strong> <span id="detailDept"></span></p>
+        <p><strong>Marks:</strong> <span id="detailMarks"></span></p>
+        <p><strong>Semester:</strong> <span id="detailSem"></span></p>
+    </div>
+
 </body>
-
 </html>

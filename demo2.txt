@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            var a;
+            a=10;
+            var b=20;
+            console .log(a+b)
+            console .log(a-b)
+         console .log(a*b)
+         console .log(a/b)
+         console .log(a%b)
+        </script>
+    </body>
+<head>
+    <title>KPRCAS2025</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        h2{
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red; font-size: 20px;">Hello KPR</h1>
+    <h2>CT</h2>
+    <h3>IT</h3>
+    <h4>BCA</h4>
+    <h5>HELLO</h5>
+    <h6>HELLO</h6>
+    <p class="header"> <b>Lorem</b>
+        <i>ipsum</i>
+        <strong>dolor</strong> sit <br>amet consectetur adipisicing elit. Illo veritatis ex tempora a odit harum labore
+        animi velit <em><u>recusandae</u></em> <q>praesentium, consectetur, fuga asperiores, eius quas eligendi esse?</q>  At, eius a.
+        Fugiat ipsam dignissimos quas. Neque vel in fugit dolor sit beatae dolorum, error possimus tempora maxime saepe
+        quis itaque. Autem nemo suscipit est provident dolores consectetur alias consequuntur deleniti deserunt!
+    </p>
+    <a class="Link Link-one"  href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+    <a class="Link" href="home.html">Home</a>
+
+    <ol>
+        <li id="one">IT</li>
+        <li id="two">BCA</li>
+        <li id="three">CT</li>
+    </ol>
+    <ul>
+        <li id="four">BCA</li>
+        <li id="five">CT</li>
+        <li id="six">IT</li>
+    </ul>
+</body>
+
+</html>
